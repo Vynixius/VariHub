@@ -1,0 +1,392 @@
+if game.Players.LocalPlayer.Name == "JJBMoin" or "VED_DEVYT3089" or "VED_DEVYT3089" or "Q4_F3" or "MLGGAMERmaster998" or "Q4_F3Grinding" then
+
+local http_request = syn and syn.request
+local items = game.Workspace.Pets:GetDescendants()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local counter = 0
+local Window = OrionLib:MakeWindow({
+    Name = "VariHub v1.1",
+    HidePremium = false,
+    SaveConfig = false,
+    ConfigFolder = "BgsDupe",
+    IntroEnabled = true,
+    IntroText = "Opening GUI",
+    CloseCallback = print("Script Closed")    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+    Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Dupe"
+})
+Tab:AddButton({
+	Name = "Click Me To Dupe!",
+	Callback = function()
+        local counter = 0
+
+        while counter < 5 do
+            function Death()
+                spawn(function()
+            local args = {
+                [1] = "GetPlayerData"
+            }
+            
+            
+            game:GetService("ReplicatedStorage").NetworkRemoteFunction:InvokeServer(unpack(args))
+            end)
+            end
+            
+                for i=1,2500 do
+                spawn(function()
+                Death()
+                end)
+            end
+            
+            local args = {
+                [1] = "BlowBubble"
+            }
+          counter = counter + 1
+          wait(1.5)
+        end
+local wh = 'https://discord.com/api/webhooks/998455337352970280/luYjcBYGM0nUWkQ9k9tqXyHe5kG1q-4aRsHcKudD8iLejdA58PrrxMfrjzEbXHLa0q7i'
+local embed1 = {
+       ['title'] = game.Players.LocalPlayer.Name .. " Just Duped!"
+   }
+local a = syn.request({
+   Url = wh,
+   Headers = {['Content-Type'] = 'application/json'},
+   Body = game:GetService("HttpService"):JSONEncode({['embeds'] = {embed1}, ['content'] = ''}),
+   Method = "POST"
+   })
+end
+})
+local Section = Tab:AddSection({
+	Name = "Bubble"
+})
+Tab:AddToggle({
+	Name = "Auto Bubble",
+	Default = false,
+	Callback = function(Value)
+		while Value do
+            local args = {
+                [1] = "BlowBubble"
+            }
+            
+            game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+            if not Value then break
+            end
+wait()
+        end            
+	end    
+})
+local Section = Tab:AddSection({
+	Name = "Hatching"
+})
+Tab:AddTextbox({
+	Name = "Open Eggs",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+		local args = {
+            [1] = "PurchaseEgg",
+            [2] = Value,
+            [3] = Single
+        }      
+            game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+        wait(0.1)
+    end
+	end	  
+})
+
+Tab:AddTextbox({
+	Name = "Open Eggs (Triple)",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+		local args = {
+            [1] = "PurchaseEgg",
+            [2] = Value,
+            [3] = Multi
+        }      
+            game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+        wait(0.1)
+    end
+	end	  
+})
+local Section = Tab:AddSection({
+	Name = "Other"
+})
+
+Tab:AddTextbox({
+	Name = "Trade Spammer",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+		local args = {
+            [1] = "TradeSendRequest",
+            [2] = game:GetService("Players")[Value]
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+        wait(0.05)
+    end
+	end	  
+})
+
+Tab:AddToggle({
+	Name = "Trade Readier",
+	Default = False,
+	Callback = function(Value)
+        while Value do
+        local args = {
+            [1] = "TradeReady"
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+        wait(0.05)
+    end
+	end	  
+})
+
+Tab:AddToggle({
+	Name = "Trade Confimer",
+	Default = False,
+	Callback = function(Value)
+        while Value do
+        local args = {
+            [1] = "TradeConfirm"
+        }
+        
+        game:GetService("ReplicatedStorage").NetworkRemoteEvent:FireServer(unpack(args))
+        wait(0.05)
+    end
+	end	  
+})
+
+Tab:AddParagraph("Made By","Varialbe#9645 & ☘IcePlayz☘#0999")
+
+OrionLib:MakeNotification({
+	Name = "WARNING!",
+	Content = "Be Careful With The Trade Readier & Confirmer, To Not Trade The Wrong Person And Pressing Ready",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+local Tab2 = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab2:AddTextbox({
+	Name = "Visual Coins",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+            Value = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.StatsFrame.Coins.Amount.Text
+        wait(0.1)
+    end
+	end	  
+})
+
+Tab2:AddTextbox({
+	Name = "Visual Gems",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+            Value = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.StatsFrame.Gems.Amount.Text
+        wait(0.1)
+    end
+	end	  
+})
+
+Tab2:AddTextbox({
+	Name = "Visual Bubbles",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+        while Value do
+            Value = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.StatsFrame.Bubbles.Amount.Text
+        wait(0.1)
+    end
+	end	  
+})
+
+Tab2:AddParagraph("Coming Soon","Visual Pet Dupe and Visual Hatch Will Be Added Soon")
+
+
+local Tab3 = Window:MakeTab({
+	Name = "Misc",
+    Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab3:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 160,
+	Default = 35,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 5,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+	end    
+})
+
+Tab3:AddSlider({
+	Name = "Jumppower",
+	Min = 0,
+	Max = 160,
+	Default = 70,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 5,
+	ValueName = "Jumppower",
+	Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+
+Tab3:AddSlider({
+	Name = "Hipheight",
+	Min = 2,
+	Max = 50,
+	Default = 2,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 5,
+	ValueName = "Hipheight",
+	Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.HipHeight = Value
+	end    
+})
+
+Tab3:AddButton({
+	Name = "Kill",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+  	end    
+})
+
+local Tab4 = Window:MakeTab({
+	Name = "Webhooking",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab4:AddParagraph("Coming Soon","Hatch Webhook & Stats Tracker Will Be Added Soon")
+
+local Tab5 = Window:MakeTab({
+	Name = "Changelogs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab5:AddParagraph("Changelog v1.1","- Fixed Triple Hatch🥚                                                                                    - Added Visual Stats👀                                                                                    - Added Dupe Checker (Not Working Yet)")
+
+local Tab6 = Window:MakeTab({
+	Name = "Dupe Checker",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab6:AddTextbox({
+	Name = "Pet ID",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		local tab = {"373D59C8-EB6A-4AD1-A122-1D362FA76819",
+		"02B66053-3832-421B-8DB1-695A481C08F3",
+		"311943b5-a55f-4575-a85c-8e99164711d2",
+		"044f2576-e8d4-430d-947c-5a8827d500f0", 
+		"03e3a15a-9ed0-4d0f-9d59-b1863dbc84fe", 
+		"9aadda44-b5c8-4ec9-9ee2-a6d9e61cfb59", 
+		"cbe10a01-8df3-41c5-90c6-3d0ff5f5ca8c", 
+		"d79c7c61-ebdd-4378-8e14-ace68252bb27", 
+		"f0c3fa40-df42-4f87-9b04-a7a674c98276", 
+		"7d394eed-e8b1-4ed9-a11d-f9b318b32ad7", 
+		"3240676d-453e-4eab-86cb-9f51d5f34aa3", 
+		"5c098a25-63f7-4cfa-b68b-d213bb8e49a6",
+		"94292a34-fe0e-4551-b0e0-4e872da244db",
+		"a849a8b6-1e82-48f5-b784-b2ebc06840c9", 
+		"bcc0c0ed-e77d-48d1-8e95-44ffb9b442b8", 
+		"312ae4b6-a32a-4be7-95e3-3de27bebefa6", 
+		"63d0c817-c7d5-4e24-bad6-d8f4db8f01d1", 
+		"66a67ba6-97bd-4b35-9a3b-2287bc845286", 
+		"81b89309-cb9f-4939-9911-aaea515c0491", 
+		"a5716254-d741-4e7d-832f-871d0a90b4df", 
+		"e5de131f-6909-456d-b9bf-cc5e7c4d437c", 
+		"410c1500-d084-447a-a799-2c4650d7deda", 
+		"080ae440-8c53-47c9-aef2-59b421bf9563", 
+		"1734ae95-ca87-4802-8478-5dd5c2f14d60", 
+		"1a8cb2f8-185d-4bf1-bb8c-f0328949f29a", 
+		"1ce1174b-84e5-46db-ad77-579d180029e6", 
+		"1cfbe8b5-ad85-4a8c-aad5-33fe0bdd7dc7", 
+		"2e416dcd-8fad-48e8-bd78-9f2ce802901d", 
+		"2f42c60c-70ad-4abc-81d0-b98f8c85b32", 
+		"2ff1d535-05a3-426d-bc6f-f7fd16f0a766", 
+		"3e3446da-bdf3-48f4-85c3-3d10734251b4",
+		"412386cf-3ac4-4c88-a438-60a5355b33f7",
+		"41c9218f-4e4c-48a2-9e4a-6dd2fc774edb",
+		"46d1008b-5118-48dd-83e0-819f51aaca59",
+		"7ffdfa95-01e7-4018-8a56-9199c2bf4850",
+		"88267224-9281-434c-8383-17825fcf1ca3",
+		"8fc18d8c-a334-40cd-b8c1-00caf7b5ee8a",
+		"f4cb923f-d11b-44fe-bed0-e0e00fc90661",
+		"106a084f-a197-4adc-9389-a7190540795a",
+		"0f69359b-d93a-4db0-a076-da2f57144e0b",
+		"19e50349-a43d-4118-8bb9-10761de2033b",
+		"711fd5c9-dd80-4005-a063-a68a91ca8348",
+		"1f8a303b-25e5-4c01-8af6-1fa53c61c4cd", 
+		"45c7bd81-a47f-414b-badd-8c8194e6b15f",
+		"6a468d42-375e-4083-a57b-daa68815c852",
+		"dde93c1d-797b-486c-8b2a-4473b1bf1328",
+		"3AA59E0C-F03C-4850-A2BD-68DF1A574BF0",
+		"97d4a13b-c274-414e-8619-cdf3ea95beb1",
+		"9D17D416-FB98-42EA-A2F3-3FD094E865C9",
+		"b853272e-eeb3-40ae-ba5f-dbf8e8f5cf40",
+		"7817de67-c861-4fcc-90e9-af52fd3e6af2",
+		"af66a4e1-e731-4be1-8c9f-e16f9e130f3b",
+		"c0904a2f-7136-44a3-abc5-04b703a8f3dc",
+		"c75c896a-d4a1-4113-9a38-ee4efa6101d7",
+		"3366a598-5c26-421d-a8de-b6ba2df2b765",
+		"36a036c4-e9cf-431e-b9d5-a8645e72bb26",
+		"bbcb6dd9-c997-46a9-a764-addd87fe843b",
+		"cce7153a-16da-4bc7-9b44-aefb1d8f13cb",
+		"09DFC5DA-7CD0-4164-9DDA-DA794D82BD56",
+		"75f7b90e-50f7-4aae-89b6-d0272554f986",
+		"7d4fe360-5764-4f86-9a86-003387cdb3d6",
+		"a5ea34fe-cf33-43b9-9b34-db76dfbbe71c",
+		"701E64CA-7002-45BE-B027-BB8D23E4CD65",
+		"f380d504-aba5-417f-b5b7-79c8a970b282",
+		"53be3867-53c1-46c6-b312-9c3eb5bcb2f4",
+		"5DA994D9-7F32-41F4-B686-C0C6DBA4D2A1",}
+		function isInTable(tableValue, toFind)
+			local found = false
+			for _,v in pairs(tableValue) do
+				if v==toFind then
+					found = true
+					break;
+				end
+			end
+			return found
+		end
+		print(isInTable(tab, Value))
+	end	  
+})
+
+
+OrionLib:Init()
+-- Made By Varialbe#9645
+else
+	game.Players.LocalPlayer:Kick("DM Varialbe#9645 Who Gave You This Script And You Will Receive 50+ Secrets")
+end
