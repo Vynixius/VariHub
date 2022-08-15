@@ -5,7 +5,7 @@ local items = game.Workspace.Pets:GetDescendants()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local counter = 0
 local Window = OrionLib:MakeWindow({
-    Name = "VariHub v1.1",
+    Name = "VariHub v1.2",
     HidePremium = false,
     SaveConfig = false,
     ConfigFolder = "BgsDupe",
@@ -291,7 +291,7 @@ local Tab5 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab5:AddParagraph("Changelog v1.1","- Fixed Triple Hatch🥚                                                                                    - Added Visual Stats👀                                                                                    - Added Dupe Checker (Not Working Yet)")
+Tab5:AddParagraph("Changelog v1.2","- Added Dupe Checker / Whitelist System ⚠️")
 
 local Tab6 = Window:MakeTab({
 	Name = "Dupe Checker",
@@ -384,7 +384,7 @@ Tab6:AddTextbox({
 	end	  
 })
 
-
+Tab6:AddParagraph("How To Use","You Just Enter The Pet ID That You Got, Press Enter, Press F9, And If The Developer Console Says True, The Pet Is Duped, If It Says False Its Clean")
 OrionLib:Init()
 -- Made By Varialbe#9645
 else
