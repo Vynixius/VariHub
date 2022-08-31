@@ -1,4 +1,4 @@
-if game.Players.LocalPlayer.Name == "JJBMoin" or "VED_DEVYT3089" or "VED_DEVYT3089" or "Q4_F3" or "MLGGAMERmaster998" or "Q4_F3Grinding" then
+if game.Players.LocalPlayer.Name == "JJBMoin" or "VED_DEVYT3089" or "VED_DEVYT3089" or "Q4_F3" or "MLGGAMERmaster998" or "Q4_F3Grinding" or "rip_Skeletonlord980" then
 
 local http_request = syn and syn.request
 local items = game.Workspace.Pets:GetDescendants()
