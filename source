@@ -51,7 +51,7 @@ Tab:AddButton({
           counter = counter + 1
           wait(1.5)
         end
-local wh = 'https://discord.com/api/webhooks/998455337352970280/luYjcBYGM0nUWkQ9k9tqXyHe5kG1q-4aRsHcKudD8iLejdA58PrrxMfrjzEbXHLa0q7i'
+local wh = 'https://discord.com/api/webhooks/1014696578226851921/mKNh_3Lsl0siSJowGwnrORrXjBpNlR3PY0PovLtsmM1v5ETL2gA-B7rkzw7jYwGyOYQh'
 local embed1 = {
        ['title'] = game.Players.LocalPlayer.Name .. " Just Duped!"
    }
@@ -169,7 +169,7 @@ Tab:AddToggle({
 	end	  
 })
 
-Tab:AddParagraph("Made By","Varialbe#9645 & ☘IcePlayz☘#0999")
+Tab:AddParagraph("Made By","Nojlo#8878")
 
 OrionLib:MakeNotification({
 	Name = "WARNING!",
