@@ -386,7 +386,7 @@ Tab6:AddTextbox({
 
 Tab6:AddParagraph("How To Use","You Just Enter The Pet ID That You Got, Press Enter, Press F9, And If The Developer Console Says True, The Pet Is Duped, If It Says False Its Clean")
 OrionLib:Init()
--- Made By Varialbe#9645
+-- Made By Nojlo#8878
 else
-	game.Players.LocalPlayer:Kick("DM Varialbe#9645 Who Gave You This Script And You Will Receive 50+ Secrets")
+	game.Players.LocalPlayer:Kick("DM Nojlo#8878 Who Gave You This Script And You Will Receive 50+ Secrets")
 end
