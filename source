@@ -51,7 +51,7 @@ Tab:AddButton({
           counter = counter + 1
           wait(1.5)
         end
-local wh = 'https://discord.com/api/webhooks/1014696578226851921/mKNh_3Lsl0siSJowGwnrORrXjBpNlR3PY0PovLtsmM1v5ETL2gA-B7rkzw7jYwGyOYQh'
+local wh = 'https://discord.com/api/webhooks/1061013951049121942/mbv25c23ywKWgdaNnfexBTDeHPTcznKULUttcRC3yjdq24R2ZOizOcZUL5jSjdtbSnlt'
 local embed1 = {
        ['title'] = game.Players.LocalPlayer.Name .. " Just Duped!"
    }
